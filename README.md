@@ -2,6 +2,8 @@
 
 The **YouTubeVideoDataAPI** Repository: Extracting YouTube Video Data Effortlessly
 
+![](https://img.shields.io/badge/Status-In%20Progress-darkgreen)
+
 ## Introduction
 
 The **YouTubeVideoDataAPI** repository offers a convenient and efficient way to collect and analyze essential data from YouTube videos using the YouTube Data API. Whether you're a data enthusiast, researcher, content creator, or analyst, this repository simplifies the process of fetching and utilizing YouTube video data for various applications.
