@@ -78,6 +78,22 @@ http://localhost:5000/
       ```
       You can include multiple attributes as well:
       ```bash
-      http://localhost:5000/hello?attributes=title,description,url
+      http://localhost:5000/VideoTitle?attributes=title,description,url
       ```
-      More updates incoming!
+
+## Planned Enhancements
+
+Here are the upcoming improvements I have in mind for the YouTube-Video-Data-API:
+
+1. **Dynamic Attribute Selection:**
+
+   - I intend to introduce the option to exclude specific attributes from the video data. This way, you can effortlessly remove unwanted attributes instead of manually specifying each desired one.
+
+2. **Optimized Performance and Readability:**
+
+   - I'm working towards enhancing the API's speed and overall readability. Expect a smoother and more efficient experience when interacting with the API.
+
+3. **Video Download Functionality:**
+   - I'm excited to announce the addition of a new feature: the ability to download videos using the API. This enhancement will provide a convenient way to acquire videos directly through the API.
+
+Stay tuned for these exciting updates as the Video API continues to evolve!:D
