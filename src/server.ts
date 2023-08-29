@@ -3,7 +3,7 @@ import cors from "cors";
 import yts from "yt-search";
 import bodyParser from "body-parser";
 import { selectedDataInterface } from "./interfaces/Interface";
-import * as validUrl from "valid-url";
+import parseUrl from "url-parse";
 const app: Application = express();
 
 app.use(cors({ credentials: true, origin: true }));
@@ -17,14 +17,10 @@ app.get("/", (req: Request, res: Response) => {
   });
 });
 app.get("/:videoInput", async (req: Request, res: Response) => {
-  let searchResults: any;
-  //const decodedUrl = decodeURIComponent(req.params.videoInput);
-  // if (validUrl.isWebUri(decodedUrl)) {
-  //  searchResults = await yts.search(decodedUrl);
-  //   console.log("Url");
-  // } else {
-  searchResults = await yts(req.params.videoInput);
-  // }
+  const decodedUrl = decodeURIComponent(req.params.videoInput);
+
+  const searchResults = await yts.search(decodedUrl);
+
   const attributes: string[] | undefined = req.query.attributes
     ?.toString()
     .split(",");
