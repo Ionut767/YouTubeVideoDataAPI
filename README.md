@@ -36,7 +36,7 @@ In summary, this project seeks to empower users with an API that offers granular
 - **YouTube Data API Integration**: Leverage the power of the YouTube Data API to ensure accurate and up-to-date video metrics.
 - **Simplified Analysis**: Access comprehensive YouTube video data to streamline your data analysis, research, and insights.
 
-## Installation
+## Installation - Run
 
 1. **Clone the Repository**:
 
@@ -44,3 +44,40 @@ In summary, this project seeks to empower users with an API that offers granular
    git clone https://github.com/yourusername/YouTubeVideoDataAPI.git
    cd YouTubeVideoDataAPI
    ```
+
+2. **Create a new terminal!**
+
+   To start the application, run the following command:
+
+   ```bash
+   npm run dev
+   ```
+
+# **How to use:**
+
+After starting the application, open your web browser and go to the following link:
+
+```bash
+http://localhost:5000/
+```
+
+1.  **Retrieving Video Data:**
+    To retrieve video data, you can use the following URLs:
+    - To get all video data:
+      ```bash
+       http://localhost:5000/VideoTitle?attributes=all
+      ```
+      Alternatively, you can use a simpler URL:
+      ```bash
+      http://localhost:5000/VideoTitle
+      ```
+    - To retrieve specific attributes:
+      You can customize the data you receive by specifying attributes in the URL. For example:
+      ```bash
+      http://localhost:5000/VideoTitle?attributes=title
+      ```
+      You can include multiple attributes as well:
+      ```bash
+      http://localhost:5000/hello?attributes=title,description,url
+      ```
+      More updates incoming!

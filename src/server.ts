@@ -3,7 +3,6 @@ import cors from "cors";
 import yts from "yt-search";
 import bodyParser from "body-parser";
 import { selectedDataInterface } from "./interfaces/Interface";
-import parseUrl from "url-parse";
 const app: Application = express();
 
 app.use(cors({ credentials: true, origin: true }));
