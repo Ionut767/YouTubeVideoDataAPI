@@ -80,6 +80,28 @@ http://localhost:5000/
       ```bash
       http://localhost:5000/VideoTitle?attributes=title,description,url
       ```
+2.  **Filtering Video Data:**
+    To filter video data, you can use the following URLs:
+    - To filter a single data:
+      ```bash
+      http://localhost:5000/VideoTitle?unattributes=title
+      ```
+      Another method is:
+      ```bash
+      http://localhost:5000/VideoTitle?attributes=all&unattributes=title
+      ```
+    - To filter more data:
+      ```bash
+      http://localhost:5000/VideoTitle?unattributes=title,descripotion
+      ```
+      Another method is:
+      ```bash
+      http://localhost:5000/VideoTitle?attributes=all&unattributes=title,description
+      ```
+    - The default noattribute value is none:
+      ```bash
+      http://localhost:5000/VideoTitle?unattributes=none
+      ```
 
 ## Planned Enhancements
 
@@ -87,7 +109,7 @@ Here are the upcoming improvements I have in mind for the YouTube-Video-Data-API
 
 1. **Dynamic Attribute Selection:**
 
-   - I intend to introduce the option to exclude specific attributes from the video data. This way, you can effortlessly remove unwanted attributes instead of manually specifying each desired one.
+   - I intend to introduce the option to exclude specific attributes from the video data. This way, you can effortlessly remove unwanted attributes instead of manually specifying each desired one. - **UPDATE! Implemented this feature!** ✅
 
 2. **Optimized Performance and Readability:**
 
