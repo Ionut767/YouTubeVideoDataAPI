@@ -26,7 +26,7 @@ app.get("/:videoInput", async (req: Request, res: Response) => {
     ?.toString()
     .split(",");
   if (searchResults && searchResults.videos.length === 0) {
-    return res.status(404).json({ error: "The video was not found!" });
+    res.status(404).json({ error: "The video was not found!" });
   } else {
     const data: selectedDataInterface = {};
     //Checking if all data are requested or not
@@ -36,7 +36,7 @@ app.get("/:videoInput", async (req: Request, res: Response) => {
         noattributes?.includes("none")) &&
       !noattributes
     ) {
-      return res.status(200).json({ data: searchResults.videos[0] });
+      res.status(200).json({ data: searchResults.videos[0] });
     } else {
       //Checking if all data is requested but with some exception
       if (!attributes || (attributes?.includes("all") && noattributes)) {
@@ -44,8 +44,6 @@ app.get("/:videoInput", async (req: Request, res: Response) => {
       }
       if (attributes) {
         attributes.forEach((attribute) => {
-          console.log("Checking attribute:", attribute);
-          console.log("noattributes:", noattributes);
           if (
             attribute in searchResults.videos[0] &&
             (!noattributes || !noattributes.includes(attribute))
@@ -56,11 +54,11 @@ app.get("/:videoInput", async (req: Request, res: Response) => {
           }
         });
       }
-    }
-    if (Object.keys(data).length > 0) {
-      return res.status(200).json({ data });
-    } else {
-      return res.status(404).json({ error: "No data was found!" });
+      if (Object.keys(data).length > 0) {
+        res.status(200).json({ data });
+      } else {
+        res.status(404).json({ error: "No data was found!" });
+      }
     }
   }
 });
