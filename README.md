@@ -119,3 +119,5 @@ Here are the upcoming improvements I have in mind for the YouTube-Video-Data-API
    - I'm excited to announce the addition of a new feature: the ability to download videos using the API. This enhancement will provide a convenient way to acquire videos directly through the API.
 
 Stay tuned for these exciting updates as the Video API continues to evolve!:D
+
+**With its primary goals achieved, this API is now being retired. While promised features may come in the future, it hinges on user interest. Thank you for your support, and I remain open to potential developments based on community demand!**
