@@ -41,7 +41,7 @@ In summary, this project seeks to empower users with an API that offers granular
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/yourusername/YouTubeVideoDataAPI.git
+   git clone https://github.com/Ionut767/YouTubeVideoDataAPI.git
    cd YouTubeVideoDataAPI
    ```
 
